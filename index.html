@@ -1,0 +1,71 @@
+<html>
+<head>
+<script>
+    function response_callback(response, elem) {
+        var status = document.getElementById(elem);
+        if (elem == "Battery") {
+            response = response.charCodeAt() / 10.0 + "V";
+        }
+        status.innerHTML = elem + ": " + response;
+    }
+
+    function request(cmd, elem="Status") {
+        var req = new XMLHttpRequest();
+        req.open('GET', 'cgi-bin/request.py?cmd='+cmd, true);
+        req.onload = function() {
+            if (req.status == 200) {
+                response_callback(req.responseText, elem);
+            }
+        }
+        req.send(null);
+    }
+
+    function timeout_callback() {
+        request("A", "Battery");
+        setTimeout("timeout_callback();", 10000);
+    }
+
+    function main() {
+        timeout_callback();
+    }
+
+
+</script>
+<style>
+    .inverse { transform: scale(1, -1); }
+</style>
+</head>  
+<body onload="main();">
+    <table>
+        <tr>
+        <td>
+            <div id="camera">
+            <img src="http://192.168.0.83:8080/stream.mjpg" width="640" height="480" class="inverse"/>
+            </div>
+        </td>
+        <td>
+            <div id="control">
+                <object data="control.svg" type="image/svg+xml">
+                </object>
+            </div>
+        </td>
+        </tr>
+    </table>
+    <table bordercolor="black" style="border-collapse: collapse; border: 2px solid black;" align="center">
+    <tr>
+    <td><div id="Status">
+     	Status:
+    </div>
+    </td>
+    </tr>
+    </table>
+    <table border=2 bordercolor="black" style=" border-collapse: collapse; border: 2px solid black;" align="center">
+    <tr>
+    <td><div id="Battery">
+     	Battery: 
+    </div>
+    </td>
+    </tr>
+    </table>
+</body>
+</html>
