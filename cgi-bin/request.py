@@ -19,4 +19,3 @@ if "cmd" in form:
     except Exception as e:
         print(str(e))
 
-

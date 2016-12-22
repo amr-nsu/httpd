@@ -5,10 +5,10 @@
         var status = document.getElementById(elem);
         if (elem == "Battery") {
             response = response.charCodeAt() / 10.0 + "V";
+            setSensorValue("INF7", response);
         }
         status.innerHTML = elem + ": " + response;
     }
-
     function request(cmd, elem="Status") {
         var req = new XMLHttpRequest();
         req.open('GET', 'cgi-bin/request.py?cmd='+cmd, true);
@@ -19,17 +19,24 @@
         }
         req.send(null);
     }
-
+    function setSensorValue(sensor, value) {
+        var a = document.getElementById("sensor_svg");
+        var svg = a.contentDocument;
+        var item = svg.getElementById(sensor);
+        item.innerHTML = value;
+    }
+    var tick = 0;
     function timeout_callback() {
+        for(var i=1; i<=6; i++) {
+            setSensorValue("INF" + i, tick * 10 + i);
+        }
+        tick += 1;
         request("A", "Battery");
         setTimeout("timeout_callback();", 10000);
     }
-
     function main() {
         timeout_callback();
     }
-
-
 </script>
 <style>
     .inverse { transform: scale(1, -1); }
@@ -53,6 +60,14 @@
     </table>
     <table bordercolor="black" style="border-collapse: collapse; border: 2px solid black;" align="center">
     <tr>
+    <td>
+            <div id="sensors">
+                <object id="sensor_svg" data="sensors.svg" width="640" height="480" type="image/svg+xml">
+                </object>
+            </div>
+        </td>
+    </tr>
+    <tr>
     <td><div id="Status">
      	Status:
     </div>
@@ -60,12 +75,7 @@
     </tr>
     </table>
     <table border=2 bordercolor="black" style=" border-collapse: collapse; border: 2px solid black;" align="center">
-    <tr>
-    <td><div id="Battery">
-     	Battery: 
-    </div>
-    </td>
-    </tr>
+    
     </table>
 </body>
 </html>
