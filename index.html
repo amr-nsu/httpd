@@ -28,7 +28,7 @@
     var tick = 0;
     function timeout_callback() {
         for(var i=1; i<=6; i++) {
-            setSensorValue("INF" + i, tick * 10 + i);
+            //setSensorValue("INF" + i, tick * 10 + i);
         }
         tick += 1;
         request("A", "Battery");
@@ -50,32 +50,16 @@
             <img src="http://192.168.0.83:8080/stream.mjpg" width="640" height="480" class="inverse"/>
             </div>
         </td>
-        <td>
-            <div id="control">
-                <object data="control.svg" type="image/svg+xml">
+        <td bordercolor="black" style="border-collapse: collapse; border: 2px solid black;" align="left">
+            <div id="sensors">
+                <object id="sensor_svg" data="sensors.svg" width="600" height="460" type="image/svg+xml">
                 </object>
             </div>
+	    <div id="Status">
+	        Status:
+	    </div>
         </td>
         </tr>
-    </table>
-    <table bordercolor="black" style="border-collapse: collapse; border: 2px solid black;" align="center">
-    <tr>
-    <td>
-            <div id="sensors">
-                <object id="sensor_svg" data="sensors.svg" width="640" height="480" type="image/svg+xml">
-                </object>
-            </div>
-        </td>
-    </tr>
-    <tr>
-    <td><div id="Status">
-     	Status:
-    </div>
-    </td>
-    </tr>
-    </table>
-    <table border=2 bordercolor="black" style=" border-collapse: collapse; border: 2px solid black;" align="center">
-    
     </table>
 </body>
 </html>
