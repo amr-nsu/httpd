@@ -7,9 +7,11 @@ form = cgi.FieldStorage()
 print("Content-type: text/html\n")
 
 def send_request(cmd):
-    ser = serial.Serial("/dev/ttyS0", 115200)
+    ser = serial.Serial("/dev/ttyS0", 115200, timeout=1)
     ser.write(cmd)
     response = ser.read()
+    if not response:
+        response = "NULL"
     print(response)
 
 if "cmd" in form:
