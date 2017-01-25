@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="290.06128"
-     inkscape:cy="259.73239"
+     inkscape:zoom="1.1725267"
+     inkscape:cx="276.7042"
+     inkscape:cy="345.0183"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -407,7 +407,9 @@
     </g>
     <g
        id="g4311"
-       onclick="window.parent.request('F')">
+       onclick=""
+       onmousedown="window.parent.request('F')"
+       onmouseup="window.parent.request('S')">
       <path
          d="m 270.04812,688.94399 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57226,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04597 l -95.61901,-1.79198 z"
          sodipodi:end="0.021953932"
@@ -433,7 +435,9 @@
     </g>
     <g
        id="g4321"
-       onclick="window.parent.request('B')">
+       onclick=""
+       onmousedown="window.parent.request('B')"
+       onmouseup="window.parent.request('S')">
       <path
          transform="matrix(-0.99998305,0.00582279,-0.00582279,-0.99998305,0,0)"
          d="m -458.42856,-927.08268 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.619,-1.79197 z"
@@ -461,7 +465,9 @@
     </g>
     <g
        id="g4316"
-       onclick="window.parent.request('R')">
+       onclick=""
+       onmousedown="window.parent.request('R')"
+       onmouseup="window.parent.request('S')">
       <path
          transform="matrix(0.00260568,0.99999661,-0.99999661,0.00260568,0,0)"
          d="m 715.15255,-478.63276 a 95.642052,81.630798 0 0 1 47.76683,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.61901,-1.79197 z"
@@ -489,7 +495,9 @@
     </g>
     <g
        id="g4326"
-       onclick="window.parent.request('L')">
+       onclick=""
+       onmousedown="window.parent.request('L')"
+       onmouseup="window.parent.request('S')">
       <path
          transform="matrix(-0.01194174,-0.99992869,0.99992869,-0.01194174,0,0)"
          d="m -908.40317,235.7174 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.619,-1.79197 z"
