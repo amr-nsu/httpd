@@ -2,12 +2,17 @@
 <head>
 <script>
     function response_callback(response, elem) {
-        var status = document.getElementById(elem);
+        var element = document.getElementById(elem);
         if (elem == "Battery") {
-            response = response.charCodeAt() / 10.0 + "V";
+            response = response.charCodeAt() / 255. * 3.3 * 10.;
+            response = response.toFixed(2)  + "V";
             setSensorValue("INF7", response);
         }
-        status.innerHTML = elem + ": " + response;
+        if (["INF1", "INF2", "INF3", "INF4", "INF5", "INF6"].includes(elem)) {
+            response = response.charCodeAt();
+            setSensorValue(elem, response);
+        }
+        element.innerHTML = elem + ": " + response;
     }
     function request(cmd, elem="Status") {
         var req = new XMLHttpRequest();
@@ -25,17 +30,22 @@
         var item = svg.getElementById(sensor);
         item.innerHTML = value;
     }
-    var tick = 0;
-    function timeout_callback() {
-        for(var i=1; i<=6; i++) {
-            //setSensorValue("INF" + i, tick * 10 + i);
-        }
-        tick += 1;
+    function battary_timeout_callback() {
         request("A", "Battery");
-        setTimeout("timeout_callback();", 10000);
+        setTimeout("battary_timeout_callback();", 10000);
+    }
+    function sensor_timeout_callback() {
+        request("1", "INF1");
+        request("2", "INF2");
+        request("3", "INF3");
+        request("4", "INF4");
+        request("5", "INF5");
+        request("6", "INF6");
+        setTimeout("sensor_timeout_callback();", 1000);
     }
     function main() {
-        timeout_callback();
+        battary_timeout_callback();
+        sensor_timeout_callback();
     }
 </script>
 <style>
