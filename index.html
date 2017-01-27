@@ -4,12 +4,12 @@
     function response_callback(response, elem) {
         var element = document.getElementById(elem);
         if (elem == "Battery") {
-            response = response.charCodeAt() / 255. * 3.3 * 10.;
+            response = response / 255. * 3.3 * 10.;
             response = response.toFixed(2)  + "V";
             setSensorValue("INF7", response);
         }
         if (["INF1", "INF2", "INF3", "INF4", "INF5", "INF6"].includes(elem)) {
-            response = response.charCodeAt();
+//            const response1 = response.charCodeAt();
             setSensorValue(elem, response);
         }
         element.innerHTML = elem + ": " + response;
@@ -34,13 +34,13 @@
         request("A", "Battery");
         setTimeout("battary_timeout_callback();", 10000);
     }
+
+    let ir = 1;
+
     function sensor_timeout_callback() {
-        request("1", "INF1");
-        request("2", "INF2");
-        request("3", "INF3");
-        request("4", "INF4");
-        request("5", "INF5");
-        request("6", "INF6");
+        request(ir.toString(), "INF" + ir);
+        ir += 1;
+        if (ir > 7) ir = 1;
         setTimeout("sensor_timeout_callback();", 1000);
     }
     function main() {
@@ -57,7 +57,7 @@
         <tr>
         <td>
             <div id="camera">
-            <img src="http://192.168.0.83:8080/stream.mjpg" width="640" height="480" class="inverse"/>
+                <!--<img src="http://192.168.0.83:8080/stream.mjpg" width="640" height="480" class="inverse"/>-->
             </div>
         </td>
         <td bordercolor="black" style="border-collapse: collapse; border: 2px solid black;" align="left">
