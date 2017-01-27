@@ -1,7 +1,7 @@
 function response_callback(response, elem) {
         const element = document.getElementById(elem);
         if (elem == "Battery") {
-            response = response / 255. * 3.3 * 10.;
+            response = response / 255. * 3.3 * 11.;
             response = response.toFixed(2)  + "V";
             setSensorValue("INF7", response);
         }
