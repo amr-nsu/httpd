@@ -3,7 +3,11 @@ import cgi
 import serial
 from random import random
 
-DEBUG = True
+DEBUG = False
+
+#HOST = '/dev/ttyUSB0'
+HOST = '/dev/ttyS0'
+BAUD = 115200
 
 form = cgi.FieldStorage()
 
@@ -20,15 +24,17 @@ def debug(request):
     return response
 
 def send_request(cmd):
-    ser = serial.Serial("/dev/ttyS0", 115200, timeout=1)
+    ser = serial.Serial(HOST, BAUD, timeout=1)
     ser.write(cmd)
     response = ser.read()
     if not response:
-        response = "NULL"
+        response = 'NULL'
+    elif cmd in ('A', '1', '2', '3', '4', '5', '6'):
+        response = ord(response)
     print(response)
 
-if "cmd" in form:
-    cmd = form["cmd"].value
+if 'cmd' in form:
+    cmd = form['cmd'].value
     if DEBUG:
         print(debug(cmd))
     else:

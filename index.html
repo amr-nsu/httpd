@@ -1,66 +1,19 @@
 <html>
 <head>
-<script>
-    function response_callback(response, elem) {
-        const element = document.getElementById(elem);
-        if (elem == "Battery") {
-            response = response.charCodeAt() / 255. * 3.3 * 10.;
-            response = response.toFixed(2)  + "V";
-            setSensorValue("INF7", response);
-        }
-        if (["INF1", "INF2", "INF3", "INF4", "INF5", "INF6"].includes(elem)) {
-            response = response.charCodeAt();
-            setSensorValue(elem, response);
-        }
-        element.innerHTML = elem + ": " + response;
-    }
-    function request(cmd, elem="Status") {
-        const req = new XMLHttpRequest();
-        req.open('GET', 'cgi-bin/request.py?cmd='+cmd, true);
-        req.onload = function() {
-            if (req.status == 200) {
-                response_callback(req.responseText, elem);
-            }
-        }
-        req.send(null);
-    }
-    function setSensorValue(sensor, value) {
-        const a = document.getElementById("sensor_svg");
-        const svg = a.contentDocument;
-        const item = svg.getElementById(sensor);
-        item.innerHTML = value;
-    }
-    function battary_timeout_callback() {
-        request("A", "Battery");
-        setTimeout("battary_timeout_callback();", 10000);
-    }
-    function sensor_timeout_callback() {
-        request("1", "INF1");
-        request("2", "INF2");
-        request("3", "INF3");
-        request("4", "INF4");
-        request("5", "INF5");
-        request("6", "INF6");
-        setTimeout("sensor_timeout_callback();", 1000);
-    }
-    function main() {
-        battary_timeout_callback();
-        sensor_timeout_callback();
-    }
+<script src="main.js">
 </script>
-<style>
-    .inverse { transform: scale(1, -1); }
-</style>
+<link  rel="stylesheet" href="style.css">
 </head>
 <body onload="main();">
     <table>
         <tr>
         <td>
             <div id="camera">
-                <img src="http://192.168.0.83:8080/stream.mjpg" width="640" height="480" class="inverse"/>
+                <!--<img src="http://192.168.0.83:8080/stream.mjpg" width="640" height="480" class="inverse"/>-->
             </div>
         </td>
-        <td bordercolor="black" style="border-collapse: collapse; border: 2px solid black;" align="left">
+        <td>
+        <h2>
             <div id="sensors">
                 <object id="sensor_svg" data="sensors.svg" width="600" height="460" type="image/svg+xml">
                 </object>
@@ -69,6 +22,7 @@
             Status:
         </div>
         </td>
+        </h2>
         </tr>
     </table>
 </body>
