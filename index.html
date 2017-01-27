@@ -2,20 +2,19 @@
 <head>
 <script>
     function response_callback(response, elem) {
-        var element = document.getElementById(elem);
+        const element = document.getElementById(elem);
         if (elem == "Battery") {
             response = response / 255. * 3.3 * 10.;
             response = response.toFixed(2)  + "V";
             setSensorValue("INF7", response);
         }
         if (["INF1", "INF2", "INF3", "INF4", "INF5", "INF6"].includes(elem)) {
-//            const response1 = response.charCodeAt();
             setSensorValue(elem, response);
         }
         element.innerHTML = elem + ": " + response;
     }
     function request(cmd, elem="Status") {
-        var req = new XMLHttpRequest();
+        const req = new XMLHttpRequest();
         req.open('GET', 'cgi-bin/request.py?cmd='+cmd, true);
         req.onload = function() {
             if (req.status == 200) {
@@ -25,9 +24,9 @@
         req.send(null);
     }
     function setSensorValue(sensor, value) {
-        var a = document.getElementById("sensor_svg");
-        var svg = a.contentDocument;
-        var item = svg.getElementById(sensor);
+        const a = document.getElementById("sensor_svg");
+        const svg = a.contentDocument;
+        const item = svg.getElementById(sensor);
         item.innerHTML = value;
     }
     function battary_timeout_callback() {
@@ -51,7 +50,7 @@
 <style>
     .inverse { transform: scale(1, -1); }
 </style>
-</head>  
+</head>
 <body onload="main();">
     <table>
         <tr>
@@ -65,9 +64,9 @@
                 <object id="sensor_svg" data="sensors.svg" width="600" height="460" type="image/svg+xml">
                 </object>
             </div>
-	    <div id="Status">
-	        Status:
-	    </div>
+        <div id="Status">
+            Status:
+        </div>
         </td>
         </tr>
     </table>
