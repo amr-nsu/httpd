@@ -1,16 +1,22 @@
+import time
 from os import curdir, sep
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
 from lib.fserial import SerialDevice
+from lib.gps import GPS
 
 #DEVICE = '/dev/ttyUSB0'
 DEVICE = '/dev/ttyS0'
 BAUD = 115200
-
+V = 0.17
+W = 2.3
 
 class HttpHandler(BaseHTTPRequestHandler):
 
     device = SerialDevice(DEVICE, BAUD)
+    gps = GPS()
+    t_prev = 0
+    request_prev = 0
 
     def do_GET(self):
         self.send_response(200)
@@ -33,6 +39,19 @@ class HttpHandler(BaseHTTPRequestHandler):
             request = self.path[-1]
             response = self.device.request(request)
             self.wfile.write(response)
+            self.get_pos(request)
+
+    def get_pos(self, request):
+        t = time.time()
+        if HttpHandler.t_prev == 0:
+            dt = 0
+        else:
+            dt = t - HttpHandler.t_prev
+        HttpHandler.t_prev = t
+        if HttpHandler.request_prev == 'F':
+            HttpHandler.gps.move(V, 0, dt)
+            print HttpHandler.gps.x, HttpHandler.gps.y, HttpHandler.gps.q
+        HttpHandler.request_prev = request
 
 
 if __name__ == '__main__':

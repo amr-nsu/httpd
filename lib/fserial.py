@@ -1,4 +1,6 @@
 import serial
+import time
+import os
 
 class SerialDevice:
 
@@ -19,5 +21,3 @@ class SerialDevice:
             return self.send_request(request)
         except Exception as e:
             return str(e)
-
-

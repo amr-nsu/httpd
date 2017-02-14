@@ -5,24 +5,35 @@
 <link  rel="stylesheet" href="lib/style.css">
 </head>
 <body onload="main();">
-    <table>
+    <table border="2px solid black" bordercolor="black">
         <tr>
         <td>
             <div id="camera">
-                <img src="http://10.0.10.10:8080/stream.mjpg" width="832" height="624" class="inverse"/>
+                <img src="http://10.0.10.10:8080/stream.mjpg" width="870" height="690" class="inverse"/>
             </div>
         </td>
         <td>
-        <h2>
             <div id="sensors">
                 <object id="sensor_svg" data="lib/sensors.svg" width="620" height="570" type="image/svg+xml">
                 </object>
             </div>
-        <div id="Status">
-            Status:
-        </div>
+        <table>
+            <tr>
+            <h2>
+                <div id="Status">
+                    Status:
+                </div>
+            </h2>
+            </tr>
+            <tr>
+            <h2>
+                <div id="Place">
+                    Coordinates:
+                </div>
+            </h2>
+            </tr>
+        </table>
         </td>
-        </h2>
         </tr>
     </table>
 </body>
