@@ -1,3 +1,4 @@
+import math
 import time
 from os import curdir, sep
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
@@ -37,7 +38,10 @@ class HttpHandler(BaseHTTPRequestHandler):
     def get_cmd(self):
         if 'cmd' in self.path:
             request = self.path[-1]
-            response = self.device.request(request)
+            if request == 'C':
+                response = "%.2f %.2f %.1f" % (HttpHandler.gps.x,HttpHandler.gps.y,HttpHandler.gps.q*180/math.pi)
+            else:
+                response = self.device.request(request)
             self.wfile.write(response)
             self.get_pos(request)
 
@@ -51,7 +55,21 @@ class HttpHandler(BaseHTTPRequestHandler):
         if HttpHandler.request_prev == 'F':
             HttpHandler.gps.move(V, 0, dt)
             print HttpHandler.gps.x, HttpHandler.gps.y, HttpHandler.gps.q
+
+        if HttpHandler.request_prev == 'B':
+            HttpHandler.gps.move(-V, 0, dt)
+            print HttpHandler.gps.x, HttpHandler.gps.y, HttpHandler.gps.q
+
+        if HttpHandler.request_prev == 'R':
+            HttpHandler.gps.move(0, W, dt)
+            print HttpHandler.gps.x, HttpHandler.gps.y, HttpHandler.gps.q
+
+        if HttpHandler.request_prev == 'L':
+            HttpHandler.gps.move(0, -W, dt)
+            print HttpHandler.gps.x, HttpHandler.gps.y, HttpHandler.gps.q
         HttpHandler.request_prev = request
+
+
 
 
 if __name__ == '__main__':
