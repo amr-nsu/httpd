@@ -46,6 +46,8 @@ class HttpHandler(BaseHTTPRequestHandler):
             self.get_pos(request)
 
     def get_pos(self, request):
+        if request not in ('F', 'B', 'R', 'L', 'S'):
+            return
         t = time.time()
         if HttpHandler.t_prev == 0:
             dt = 0
