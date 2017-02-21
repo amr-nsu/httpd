@@ -8,7 +8,7 @@ from lib.gps import GPS
 
 #DEVICE = '/dev/ttyUSB0'
 DEVICE = '/dev/ttyS0'
-BAUD = 115200
+BAUD = 19200
 V = 0.17
 W = 2.3
 
