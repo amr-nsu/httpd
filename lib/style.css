@@ -1,6 +1,9 @@
- .inverse { transform: scale(1, -1); }
-    h2 {
-        border-collapse: collapse;
-        align :"left";
-    }
+.inverse {
+    transform: scale(-1, -1);
+}
+
+h2 {
+    border-collapse: collapse;
+    align :"left";
+}
 
