@@ -1,0 +1,54 @@
+<html>
+<head>
+<script src="lib/main.js">
+</script>
+<link  rel="stylesheet" href="lib/style.css">
+</head>
+<body onload="main();">
+    <table border="2px solid black" bordercolor="black">
+        <tr>
+        <td>
+            <div id="camera">
+                <img src="http://192.168.0.83:8080/stream.mjpg" width="870" height="690" class="inverse"/>
+            </div>
+        </td>
+        <td>
+            <div id="sensors">
+                <object id="sensor_svg" data="lib/sensors.svg" width="620" height="570" type="image/svg+xml">
+                </object>
+            </div>
+        <table border=1>
+            <tr>
+                <td width="450">  
+                    <h2>
+                        <div id="Status">
+                            Status:
+                        </div>
+                    </h2>
+                </td>
+            <td width="110">
+                    X: <input id="posx" size="2" type="text">
+            </td>
+             <td width="110">
+                    Y: <input id="posy" size="2" type="text">
+            </td>
+            </tr>
+        <table border=1>
+            <tr>
+            <td width=400>
+            <h2>
+                <div id="Coordinates">
+                    Coordinates:
+                </div>
+            </h2>
+            </td>
+            <td width="220" align="center">
+                    <input id="go" type="button" onclick=go() value="             GO!             ">
+            </td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+    </table>
+</body>
+</html>
