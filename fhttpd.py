@@ -25,6 +25,7 @@ class HttpHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.get_file()
         self.get_cmd()
+        self.go_pos()
 
     def get_file(self):
         if self.path.endswith(".html") or self.path.endswith(".js") or self.path.endswith(".svg") or self.path.endswith(".css"):
@@ -71,7 +72,24 @@ class HttpHandler(BaseHTTPRequestHandler):
             print HttpHandler.gps.x, HttpHandler.gps.y, HttpHandler.gps.q
         HttpHandler.request_prev = request
 
-
+    def go_pos(self):
+        if 'go' in self.path:
+            r = self.path[3:]
+            q = r.split('&')
+            x = q[0][2:]
+            y = q[1][2:]
+            if (x - HttpHandler.gps.x)>0:
+                while (x - HttpHandler.gps.x)>0:
+                    self.device.request('F')
+            else:
+                while (x - HttpHandler.gps.x)<0:
+                    self.device.request('B') 
+            # if (y - HttpHandler.gps.y)>0:
+            #    while (y - HttpHandler.gps.y)>0:
+            #        self.device.request('R')
+            #else:
+            #    while (y - HttpHandler.gps.y)<0:
+            #        self.device.request('L')  
 
 
 if __name__ == '__main__':

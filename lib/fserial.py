@@ -12,8 +12,6 @@ class SerialDevice:
         response = self.serial.readline()[:-1]
         if not response:
             response = 'NULL'
-        elif request in ('A', '1', '2', '3', '4', '5', '6'):
-            response = ord(response)
         return response
 
     def request(self, request):
