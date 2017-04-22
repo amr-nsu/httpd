@@ -371,7 +371,7 @@
          y="943.28607">IR5</tspan></text>
     <g
        id="g4331"
-       onclick="window.parent.request('S')">
+       onclick="window.parent.request1('S')">
       <rect
          ry="1.4220804"
          inkscape:label="#rect3503"
@@ -408,8 +408,8 @@
     <g
        id="g4311"
        onclick=""
-       onmousedown="window.parent.request('F')"
-       onmouseup="window.parent.request('S')">
+       onmousedown="window.parent.request1('F')"
+       onmouseup="window.parent.request1('S')">
       <path
          d="m 270.04812,688.94399 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57226,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04597 l -95.61901,-1.79198 z"
          sodipodi:end="0.021953932"
@@ -436,8 +436,8 @@
     <g
        id="g4321"
        onclick=""
-       onmousedown="window.parent.request('B')"
-       onmouseup="window.parent.request('S')">
+       onmousedown="window.parent.request1('B')"
+       onmouseup="window.parent.request1('S')">
       <path
          transform="matrix(-0.99998305,0.00582279,-0.00582279,-0.99998305,0,0)"
          d="m -458.42856,-927.08268 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.619,-1.79197 z"
@@ -466,8 +466,8 @@
     <g
        id="g4316"
        onclick=""
-       onmousedown="window.parent.request('R')"
-       onmouseup="window.parent.request('S')">
+       onmousedown="window.parent.request1('R')"
+       onmouseup="window.parent.request1('S')">
       <path
          transform="matrix(0.00260568,0.99999661,-0.99999661,0.00260568,0,0)"
          d="m 715.15255,-478.63276 a 95.642052,81.630798 0 0 1 47.76683,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.61901,-1.79197 z"
@@ -496,8 +496,8 @@
     <g
        id="g4326"
        onclick=""
-       onmousedown="window.parent.request('L')"
-       onmouseup="window.parent.request('S')">
+       onmousedown="window.parent.request1('L')"
+       onmouseup="window.parent.request1('S')">
       <path
          transform="matrix(-0.01194174,-0.99992869,0.99992869,-0.01194174,0,0)"
          d="m -908.40317,235.7174 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.619,-1.79197 z"

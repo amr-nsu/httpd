@@ -4,13 +4,13 @@ from os import curdir, sep
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
 from lib.fserial import SerialDevice
-from lib.gps import GPS
+from lib.gps import GPS, wrap_to_pi
 
 #DEVICE = '/dev/ttyUSB0'
 DEVICE = '/dev/ttyS0'
 BAUD = 19200
-V = 0.17
-W = 2.3
+V = 0.39
+W = 4.9
 
 class HttpHandler(BaseHTTPRequestHandler):
 
@@ -37,14 +37,15 @@ class HttpHandler(BaseHTTPRequestHandler):
                 self.send_error(404, str(e))
 
     def get_cmd(self):
-        if 'cmd' in self.path:
-            request = self.path[-1]
-            if request == 'C':
-                response = "%.2f %.2f %.1f" % (HttpHandler.gps.x,HttpHandler.gps.y,HttpHandler.gps.q*180/math.pi)
-            else:
-                response = self.device.request(request)
-            self.wfile.write(response)
-            self.get_pos(request)
+        if not 'cmd' in self.path or 'cmd=go' in self.path:
+            return
+        request = self.path[-1]
+        if request == 'C':
+            response = "%.2f %.2f %.1f" % (HttpHandler.gps.x,HttpHandler.gps.y,HttpHandler.gps.q*180/math.pi)
+        else:
+            response = self.device.request(request)
+        self.wfile.write(response)
+        self.get_pos(request)
 
     def get_pos(self, request):
         if request not in ('F', 'B', 'R', 'L', 'S'):
@@ -73,23 +74,47 @@ class HttpHandler(BaseHTTPRequestHandler):
         HttpHandler.request_prev = request
 
     def go_pos(self):
-        if 'go' in self.path:
-            r = self.path[3:]
-            q = r.split('&')
-            x = q[0][2:]
-            y = q[1][2:]
-            if (x - HttpHandler.gps.x)>0:
-                while (x - HttpHandler.gps.x)>0:
-                    self.device.request('F')
-            else:
-                while (x - HttpHandler.gps.x)<0:
-                    self.device.request('B') 
-            # if (y - HttpHandler.gps.y)>0:
-            #    while (y - HttpHandler.gps.y)>0:
-            #        self.device.request('R')
-            #else:
-            #    while (y - HttpHandler.gps.y)<0:
-            #        self.device.request('L')  
+        if not 'cmd=go' in self.path:
+            return
+        r = self.path[8:]
+        q = r.split('&')
+        x = float(q[0][2:])
+        y = float(q[1][2:])
+        dt = 0.0001
+        a = x - HttpHandler.gps.x
+        b = y - HttpHandler.gps.y
+        c = math.sqrt(a*a+b*b)
+        alph = math.atan2(b, a)
+ 
+        if wrap_to_pi(alph -HttpHandler.gps.q) > 0:
+            direction = 'R'
+            w = W
+        else:
+            direction = 'L'
+            w = -W
+        move = False 
+        while (abs(HttpHandler.gps.q - alph) > 0.001):
+            if not move:
+                self.device.request(direction)
+                move = True
+            HttpHandler.gps.move(0, w, dt)
+            time.sleep(dt)
+
+        c_prev = c
+        move = False
+        while c > 0.001:
+            if not move:
+                self.device.request('F')
+                move = True
+            HttpHandler.gps.move(V, 0, dt)
+            time.sleep(dt)
+            a = x - HttpHandler.gps.x
+            b = y - HttpHandler.gps.y
+            c = math.sqrt(a*a+b*b)
+            if c > c_prev:  # distance increase
+                break
+            c_prev = c
+        self.device.request('S') 
 
 
 if __name__ == '__main__':
