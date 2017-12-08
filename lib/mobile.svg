@@ -26,8 +26,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1725267"
-     inkscape:cx="561.8347"
-     inkscape:cy="245.45555"
+     inkscape:cx="429.21512"
+     inkscape:cy="313.68427"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -88,7 +88,7 @@
          y="679.65161" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="112.48732"
        y="742.00677"
        id="INF6"
@@ -100,7 +100,7 @@
          y="742.00677">IR6</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="115.11678"
        y="610.68695"
        id="INF1"
@@ -112,19 +112,19 @@
          y="610.68695">IR1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="569.21838"
-       y="612.70728"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="575.21838"
+       y="610.70728"
        id="INF2"
        sodipodi:linespacing="125%"
        inkscape:label="#text4460"><tspan
          sodipodi:role="line"
          id="tspan4462"
-         x="569.21838"
-         y="612.70728">IR2</tspan></text>
+         x="575.21838"
+         y="610.70728">IR2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="575.80719"
        y="737.98651"
        id="INF3"
@@ -136,7 +136,7 @@
          y="737.98651">IR3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="577.21838"
        y="867.26575"
        id="INF4"
@@ -148,7 +148,7 @@
          y="867.26575">IR4</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="111.07617"
        y="867.28607"
        id="INF5"
@@ -159,46 +159,10 @@
          x="111.07617"
          y="867.28607">IR5</tspan></text>
     <g
-       id="g4331"
-       onclick="window.parent.ui_button_clicked_callback('S')"
-       transform="translate(46,-66)">
-      <rect
-         ry="1.4220804"
-         inkscape:label="#rect3503"
-         y="738.16425"
-         x="280.21542"
-         height="138.63699"
-         width="168.04694"
-         id="IR0"
-         style="fill:#b4e2ff;stroke:#000000;stroke-width:0.7370345;stroke-opacity:1" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3624"
-         y="864.23016"
-         x="288.86304"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           y="864.23016"
-           x="288.86304"
-           id="tspan3626"
-           sodipodi:role="line">BATTERY</tspan></text>
-      <text
-         inkscape:label="#text4478"
-         sodipodi:linespacing="125%"
-         id="INF7"
-         y="777.35706"
-         x="319.16757"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           y="777.35706"
-           x="319.16757"
-           id="tspan4480"
-           sodipodi:role="line">NULL</tspan></text>
-    </g>
-    <g
        id="g4311"
        onclick="window.parent.ui_button_clicked_callback('F')"
-       transform="translate(40,-151.46582)">
+       transform="translate(40,-151.46582)"
+       style="opacity:0.7">
       <path
          d="m 270.04812,688.94399 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57226,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04597 l -95.61901,-1.79198 z"
          sodipodi:end="0.021953932"
@@ -210,22 +174,12 @@
          sodipodi:type="arc"
          id="path3388"
          style="fill:#8e9100;fill-opacity:0.70980392;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4234"
-         y="668.40228"
-         x="349.74557"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           y="668.40228"
-           x="349.74557"
-           id="tspan4236"
-           sodipodi:role="line">F</tspan></text>
     </g>
     <g
        id="g4321"
        onclick="window.parent.ui_button_clicked_callback('B')"
-       transform="translate(40,46)">
+       transform="translate(40,44)"
+       style="opacity:0.7">
       <path
          transform="matrix(-0.99998305,0.00582279,-0.00582279,-0.99998305,0,0)"
          d="m -458.42856,-927.08268 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.619,-1.79197 z"
@@ -238,23 +192,12 @@
          sodipodi:type="arc"
          id="path3388-2-1"
          style="fill:#8e9100;fill-opacity:0.70980392;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4238"
-         y="964.48737"
-         x="352.97595"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif"
-           y="964.48737"
-           x="352.97595"
-           id="tspan4240"
-           sodipodi:role="line">B</tspan></text>
     </g>
     <g
        id="g4316"
        onclick="window.parent.ui_button_clicked_callback('R')"
-       transform="translate(236,-64)">
+       transform="translate(236,-64)"
+       style="opacity:0.7">
       <path
          transform="matrix(0.00260568,0.99999661,-0.99999661,0.00260568,0,0)"
          d="m 715.15255,-478.63276 a 95.642052,81.630798 0 0 1 47.76683,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.61901,-1.79197 z"
@@ -267,23 +210,12 @@
          sodipodi:type="arc"
          id="path3388-2-3"
          style="fill:#8e9100;fill-opacity:0.70980392;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4242"
-         y="816.61395"
-         x="493.64966"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif"
-           y="816.61395"
-           x="493.64966"
-           id="tspan4244"
-           sodipodi:role="line">R</tspan></text>
     </g>
     <g
        id="g4326"
        onclick="window.parent.ui_button_clicked_callback('L')"
-       transform="translate(-162,-72)">
+       transform="translate(-160,-72)"
+       style="opacity:0.7">
       <path
          transform="matrix(-0.01194174,-0.99992869,0.99992869,-0.01194174,0,0)"
          d="m -908.40317,235.7174 a 95.642052,81.630798 0 0 1 47.76682,-71.63719 95.642052,81.630798 0 0 1 96.57225,0.41693 95.642052,81.630798 0 0 1 46.91528,72.04596 l -95.619,-1.79197 z"
@@ -296,18 +228,19 @@
          sodipodi:type="arc"
          id="path3388-2"
          style="fill:#8e9100;fill-opacity:0.70980392;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4246"
-         y="821.10663"
-         x="201.53391"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif"
-           y="821.10663"
-           x="201.53391"
-           id="tspan4248"
-           sodipodi:role="line">L</tspan></text>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="357.63107"
+       y="739.14417"
+       id="INF7"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text4460"
+       onclick="window.parent.ui_button_clicked_callback('S')"><tspan
+         sodipodi:role="line"
+         id="tspan4462-6"
+         x="357.63107"
+         y="739.14417">BATTERY</tspan></text>
   </g>
 </svg>
