@@ -1,0 +1,23 @@
+.inverse {
+    transform: scale(-1, -1);
+}
+
+#camera {
+  position: relative;
+}
+
+#camera img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 640pt;
+  height: 480pt;
+}
+
+#camera #sensors {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 640pt;
+  height: 480pt;
+}

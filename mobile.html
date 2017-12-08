@@ -2,39 +2,16 @@
 <head>
 <script src="lib/main.js">
 </script>
-<link  rel="stylesheet" href="lib/style.css">
+<link  rel="stylesheet" href="lib/style_mobile.css">
 </head>
 <body onload="main();">
-    <table border="2px solid black" bordercolor="black">
-        <tr>
-        <td>
-            <div id="camera">
-                <img src="http://192.168.0.83:8080/stream.mjpg" width="870" height="690" class="inverse"/>
-            </div>
-        </td>
-        <td>
-            <div id="sensors">
-                <object id="sensor_svg" data="lib/sensors_mobile.svg" width="620" height="570" type="image/svg+xml">
-                </object>
-            </div>
-        <table>
-            <tr>
-            <h2>
-                <div id="Status">
-                    Status:
-                </div>
-            </h2>
-            </tr>
-            <tr>
-            <h2>
-                <div id="Coordinates">
-                    Coordinates:
-                </div>
-            </h2>
-            </tr>
-        </table>
-        </td>
-        </tr>
-    </table>
+
+<div id="camera">
+    <img src="http://192.168.0.103:8080/stream.mjpg" width="640pt" height="480pt" class="inverse"/>
+    <div id="sensors">
+        <object id="sensor_svg" data="lib/mobile.svg" type="image/svg+xml">
+        </object>
+    </div>
+</div>
 </body>
 </html>
